@@ -5,15 +5,20 @@ import { Task } from "../../types/public-types";
 const localeDateStringCache = {};
 const toLocaleDateStringFactory =
   (locale: string) =>
-  (date: Date) => {
+  (date: Date, dateTimeOptions: Intl.DateTimeFormatOptions) => {
     const key = date.toString();
     let lds = localeDateStringCache[key];
     if (!lds) {
-      lds = date.toLocaleDateString(locale, {year: 'numeric', month: 'numeric', day: 'numeric'});
+      lds = date.toLocaleDateString(locale, dateTimeOptions);
       localeDateStringCache[key] = lds;
     }
     return lds;
   };
+const dateTimeOptions = {
+  year: "numeric",
+  month: "numeric",
+  day: "numeric"
+};
 
 export const TaskListTableDefault: React.FC<{
   rowHeight: number;
@@ -90,7 +95,7 @@ export const TaskListTableDefault: React.FC<{
                 maxWidth: rowWidth,
               }}
             >
-              &nbsp;{toLocaleDateString(t.start, {year: 'numeric', month: 'numeric', day: 'numeric'})}
+              &nbsp;{toLocaleDateString(t.start, dateTimeOptions)}
             </div>
             <div
               className={styles.taskListCell}
@@ -99,7 +104,7 @@ export const TaskListTableDefault: React.FC<{
                 maxWidth: rowWidth,
               }}
             >
-              &nbsp;{toLocaleDateString(t.end, {year: 'numeric', month: 'numeric', day: 'numeric'})}
+              &nbsp;{toLocaleDateString(t.end, dateTimeOptions)}
             </div>
           </div>
         );
