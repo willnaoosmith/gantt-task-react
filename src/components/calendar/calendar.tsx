@@ -177,7 +177,7 @@ export const Calendar: React.FC<CalendarProps> = ({
     const dates = dateSetup.dates;
     for (let i = 0; i < dates.length; i++) {
       const date = dates[i];
-      const bottomValue = `${date.toLocaleDateString('pt-br', { month:"numeric", day:"numeric"})}`;
+      const bottomValue = `${date.toLocaleDateString('pt-br', { month:"short", day:"numeric"})}`;
 
       bottomValues.push(
         <text
