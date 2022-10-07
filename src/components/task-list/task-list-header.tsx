@@ -27,7 +27,7 @@ export const TaskListHeaderDefault: React.FC<{
             minWidth: rowWidth,
           }}
         >
-          &nbsp;Tarefas1
+          &nbsp;Tarefas
         </div>
         <div
           className={styles.ganttTable_HeaderSeparator}
