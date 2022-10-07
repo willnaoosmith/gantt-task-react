@@ -9,7 +9,7 @@ const toLocaleDateStringFactory =
     const key = date.toString();
     let lds = localeDateStringCache[key];
     if (!lds) {
-      lds = date.toLocaleDateString(locale, dateTimeOptions);
+      lds = date.toLocaleDateString(locale, {year: 'numeric', month: 'numeric', day: 'numeric'});
       localeDateStringCache[key] = lds;
     }
     return lds;
@@ -17,7 +17,7 @@ const toLocaleDateStringFactory =
 const dateTimeOptions: Intl.DateTimeFormatOptions = {
   year: "numeric",
   month: "numeric",
-  day: "numeric",
+  day: "numeric"
 };
 
 export const TaskListTableDefault: React.FC<{
@@ -95,7 +95,7 @@ export const TaskListTableDefault: React.FC<{
                 maxWidth: rowWidth,
               }}
             >
-              &nbsp;{toLocaleDateString(t.start, dateTimeOptions)}
+              &nbsp;{toLocaleDateString(t.start, {year: 'numeric', month: 'numeric', day: 'numeric'})}
             </div>
             <div
               className={styles.taskListCell}
@@ -104,7 +104,7 @@ export const TaskListTableDefault: React.FC<{
                 maxWidth: rowWidth,
               }}
             >
-              &nbsp;{toLocaleDateString(t.end, dateTimeOptions)}
+              &nbsp;{toLocaleDateString(t.end, {year: 'numeric', month: 'numeric', day: 'numeric'})}
             </div>
           </div>
         );
