@@ -14,11 +14,6 @@ const toLocaleDateStringFactory =
     }
     return lds;
   };
-const dateTimeOptions: Intl.DateTimeFormatOptions = {
-  year: "numeric",
-  month: "numeric",
-  day: "numeric"
-};
 
 export const TaskListTableDefault: React.FC<{
   rowHeight: number;
