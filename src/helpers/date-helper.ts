@@ -146,24 +146,31 @@ export const seedDates = (
     switch (viewMode) {
       case ViewMode.Year:
         currentDate = addToDate(currentDate, 1, "year");
+        console.log("1")
         break;
       case ViewMode.Month:
         currentDate = addToDate(currentDate, 1, "month");
+        console.log("2")
         break;
       case ViewMode.Week:
         currentDate = addToDate(currentDate, 7, "day");
+        console.log("3")
         break;
       case ViewMode.Day:
         currentDate = addToDate(currentDate, 1, "day");
+        console.log("4")
         break;
       case ViewMode.HalfDay:
         currentDate = addToDate(currentDate, 12, "hour");
+        console.log("5")
         break;
       case ViewMode.QuarterDay:
         currentDate = addToDate(currentDate, 6, "hour");
+        console.log("6")
         break;
       case ViewMode.Hour:
         currentDate = addToDate(currentDate, 1, "hour");
+        console.log("7")
         break;
     }
     dates.push(currentDate);
@@ -173,7 +180,7 @@ export const seedDates = (
 
 export const getLocaleMonth = (date: Date, locale: string) => {
   let bottomValue = getCachedDateTimeFormat(locale, {
-    month: "numeric",
+    month: "long",
   }).format(date);
   bottomValue = bottomValue.replace(
     bottomValue[0],
