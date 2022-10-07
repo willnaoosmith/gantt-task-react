@@ -77,6 +77,7 @@ export const Calendar: React.FC<CalendarProps> = ({
   };
 
   const getCalendarValuesForMonth = () => {
+    console.log("here")
     const topValues: ReactChild[] = [];
     const bottomValues: ReactChild[] = [];
     const topDefaultHeight = headerHeight * 0.5;
@@ -107,7 +108,7 @@ export const Calendar: React.FC<CalendarProps> = ({
         topValues.push(
           <TopPartOfCalendar
             key={topValue}
-            value={"top value"}
+            value={topValue}
             x1Line={columnWidth * i}
             y1Line={0}
             y2Line={topDefaultHeight}
