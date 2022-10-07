@@ -107,7 +107,7 @@ export const Calendar: React.FC<CalendarProps> = ({
         topValues.push(
           <TopPartOfCalendar
             key={topValue}
-            value={topValue}
+            value={"top value"}
             x1Line={columnWidth * i}
             y1Line={0}
             y2Line={topDefaultHeight}
