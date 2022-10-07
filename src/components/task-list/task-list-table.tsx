@@ -5,7 +5,7 @@ import { Task } from "../../types/public-types";
 const localeDateStringCache = {};
 const toLocaleDateStringFactory =
   (locale: string) =>
-  (date: Date, dateTimeOptions: Intl.DateTimeFormatOptions) => {
+  (date: Date) => {
     const key = date.toString();
     let lds = localeDateStringCache[key];
     if (!lds) {
