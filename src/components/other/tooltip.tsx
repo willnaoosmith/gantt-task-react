@@ -136,10 +136,6 @@ export const StandardTooltipContent: React.FC<{
           (1000 * 60 * 60 * 24)
         )} dia(s)`}</p>
       )}
-
-      <p className={styles.tooltipDefaultContainerParagraph}>
-        {!!task.progress && `Progress: ${task.progress} %`}
-      </p>
     </div>
   );
 };
