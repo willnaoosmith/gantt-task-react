@@ -93,10 +93,14 @@ export const ganttDateRange = (
       newEndDate = startOfDate(newEndDate, "year");
       break;
     case ViewMode.Month:
-
+      console.log("Before", newStartDate, newEndDate)
+      newStartDate = addToDate(newStartDate, -1 * preStepsCount, "month");
       newStartDate = startOfDate(newStartDate, "month");
+      newEndDate = addToDate(newEndDate, 1, "year");
       newEndDate = startOfDate(newEndDate, "year");
+      console.log("After", newStartDate, newEndDate)
       break;
+
     case ViewMode.Week:
 
       newStartDate = startOfDate(newStartDate, "day");
