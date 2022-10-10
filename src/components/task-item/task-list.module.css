@@ -1,6 +1,6 @@
 .barLabel {
   fill: #000;
-  text-anchor: start;
+  text-anchor: middle;
   dominant-baseline: central;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
