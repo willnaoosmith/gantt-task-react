@@ -98,8 +98,8 @@ export const ganttDateRange = (
     case ViewMode.Month:
 
       newStartDate = addToDate(newStartDate, 0, "month");
-      newStartDate = startOfDate(newStartDate, "month");
-      newEndDate = new Date(newEndDate.getFullYear(),11,0)
+      newStartDate = startOfDate(newStartDate, "month");    
+      newEndDate = new Date(newEndDate.getFullYear(),12,0)
       break;
 
     case ViewMode.Week:
