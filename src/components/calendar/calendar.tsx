@@ -82,8 +82,6 @@ export const Calendar: React.FC<CalendarProps> = ({
     const bottomValues: ReactChild[] = [];
     const topDefaultHeight = headerHeight * 0.5;
 
-    console.log(dateSetup.dates)
-
     for (let i = 0; i < dateSetup.dates.length; i++) {
       const date = dateSetup.dates[i];
 
