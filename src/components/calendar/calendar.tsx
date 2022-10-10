@@ -36,6 +36,7 @@ export const Calendar: React.FC<CalendarProps> = ({
     const topValues: ReactChild[] = [];
     const bottomValues: ReactChild[] = [];
     const topDefaultHeight = headerHeight * 0.5;
+    console.log(dateSetup.dates)
     for (let i = 0; i < dateSetup.dates.length; i++) {
       const date = dateSetup.dates[i];
       const bottomValue = date.getFullYear();
@@ -80,10 +81,11 @@ export const Calendar: React.FC<CalendarProps> = ({
     const topValues: ReactChild[] = [];
     const bottomValues: ReactChild[] = [];
     const topDefaultHeight = headerHeight * 0.5;
+
+    console.log(dateSetup.dates)
+
     for (let i = 0; i < dateSetup.dates.length; i++) {
       const date = dateSetup.dates[i];
-
-      console.log(date)
 
       const bottomValue = getLocaleMonth(date, locale);
       bottomValues.push(
