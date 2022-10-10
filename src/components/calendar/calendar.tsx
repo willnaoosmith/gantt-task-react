@@ -83,6 +83,7 @@ export const Calendar: React.FC<CalendarProps> = ({
     for (let i = 0; i < dateSetup.dates.length; i++) {
       const date = dateSetup.dates[i];
       const bottomValue = getLocaleMonth(date, locale);
+      console.log(bottomValue)
       bottomValues.push(
         <text
           key={bottomValue + date.getFullYear()}
@@ -105,6 +106,17 @@ export const Calendar: React.FC<CalendarProps> = ({
           xText = (6 + i - date.getMonth()) * columnWidth;
         }
 
+        topValues.push(
+          <TopPartOfCalendar
+            key={topValue}
+            value={topValue}
+            x1Line={columnWidth * i}
+            y1Line={0}
+            y2Line={topDefaultHeight}
+            xText={xText}
+            yText={topDefaultHeight * 0.9}
+          />
+        );
       }
     }
 
