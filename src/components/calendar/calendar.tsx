@@ -117,6 +117,9 @@ export const Calendar: React.FC<CalendarProps> = ({
         );
       }
     }
+
+    console.log(topValues, bottomValues)
+
     return [topValues, bottomValues];
   };
 
