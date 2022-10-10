@@ -86,21 +86,19 @@ export const ganttDateRange = (
   }
   switch (viewMode) {
     case ViewMode.Year:
-      console.log(1)
+
       newStartDate = addToDate(newStartDate, -1, "year");
       newStartDate = startOfDate(newStartDate, "year");
       newEndDate = addToDate(newEndDate, 1, "year");
       newEndDate = startOfDate(newEndDate, "year");
       break;
     case ViewMode.Month:
-      console.log(2)
-      newStartDate = addToDate(newStartDate, -1 * preStepsCount, "month");
+
       newStartDate = startOfDate(newStartDate, "month");
-      newEndDate = addToDate(newEndDate, 1, "year");
       newEndDate = startOfDate(newEndDate, "year");
       break;
     case ViewMode.Week:
-      console.log(3)
+
       newStartDate = startOfDate(newStartDate, "day");
       newStartDate = addToDate(
         getMonday(newStartDate),
@@ -111,28 +109,28 @@ export const ganttDateRange = (
       newEndDate = addToDate(newEndDate, 1.5, "month");
       break;
     case ViewMode.Day:
-      console.log(4)
+
       newStartDate = startOfDate(newStartDate, "day");
       newStartDate = addToDate(newStartDate, -1 * preStepsCount, "day");
       newEndDate = startOfDate(newEndDate, "day");
       newEndDate = addToDate(newEndDate, 19, "day");
       break;
     case ViewMode.QuarterDay:
-      console.log(5)
+
       newStartDate = startOfDate(newStartDate, "day");
       newStartDate = addToDate(newStartDate, -1 * preStepsCount, "day");
       newEndDate = startOfDate(newEndDate, "day");
       newEndDate = addToDate(newEndDate, 66, "hour"); // 24(1 day)*3 - 6
       break;
     case ViewMode.HalfDay:
-      console.log(6)
+
       newStartDate = startOfDate(newStartDate, "day");
       newStartDate = addToDate(newStartDate, -1 * preStepsCount, "day");
       newEndDate = startOfDate(newEndDate, "day");
       newEndDate = addToDate(newEndDate, 108, "hour"); // 24(1 day)*5 - 12
       break;
     case ViewMode.Hour:
-      console.log(7)
+
       newStartDate = startOfDate(newStartDate, "hour");
       newStartDate = addToDate(newStartDate, -1 * preStepsCount, "hour");
       newEndDate = startOfDate(newEndDate, "day");
