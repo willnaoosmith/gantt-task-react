@@ -116,6 +116,7 @@ export const TaskItem: React.FC<TaskItemProps> = props => {
             ? style.barLabel
             : style.barLabel && style.barLabelOutside
         }
+        style={{color: 'black'}}
         ref={textRef}
       >
         {task.name}

@@ -38,9 +38,6 @@ export const BarDisplay: React.FC<BarDisplayProps> = ({
     return isSelected ? styles.backgroundSelectedColor : styles.backgroundColor;
   };
 
-  console.log("X", x)
-  console.log("Y", y)
-
   return (
     <g onMouseDown={onMouseDown}>
       <rect
