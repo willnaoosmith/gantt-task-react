@@ -158,7 +158,7 @@ export const seedDates = (
         currentDate = addToDate(currentDate, 1, "year");
         break;
       case ViewMode.Month:
-        currentDate = addToDate(currentDate, 1, "day");
+        currentDate = addToDate(currentDate, 1, "month");
         break;
       case ViewMode.Week:
         currentDate = addToDate(currentDate, 7, "day");
