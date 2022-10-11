@@ -99,7 +99,7 @@ export const ganttDateRange = (
 
       newStartDate = addToDate(newStartDate, 0, "month");
       newStartDate = startOfDate(newStartDate, "month");    
-      newEndDate = new Date(newEndDate.getFullYear(),12,0)
+      newEndDate = newEndDate
       break;
 
     case ViewMode.Week:
